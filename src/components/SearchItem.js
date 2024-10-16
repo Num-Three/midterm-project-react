@@ -10,7 +10,7 @@ const SearchItems = ({ items }) => {
         <div>
             <Dashboard/>
             <h2>Search Items</h2>
-
+            <label>ID</label><br/>
             <input type='text' onChange={e => setFilter(e.target.value)}/>
             <DisplayItems items={items} filter={filter} />
         </div>
