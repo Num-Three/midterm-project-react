@@ -11,8 +11,9 @@ const DisplayItemsCategory = ({ items }) => {
             <h2>Display Items by Category</h2>
             <select name="categories" id="categories" onChange={e => setCategory(e.target.value)}>
                 <option value disabled selected>Select a Category</option>
-                <option value="Graphics Card">Graphics Card</option>
-                <option value="Laptop">Laptop</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Entertainment">Entertainment</option>
             </select>
             <DisplayItems items={items} filter={category} />
         </div >

@@ -6,7 +6,7 @@ const AddItem = ({addItem, items}) => {
     const [form_name, setName] = useState(null)
     const [form_quantity, setQuantity] = useState(null)
     const [form_price, setPrice] = useState(null)
-    const [form_category, setCategory] = useState('Graphics Card')  /* the form is set to graphics card by default so im initializing it as this as kind of just a workaround */
+    const [form_category, setCategory] = useState('Clothing')  /* the form is set to clothing by default so im initializing it as this as kind of just a workaround */
     const [message, setMessage] = useState(null)
 
     function createMessage(msg) {
@@ -35,7 +35,7 @@ const AddItem = ({addItem, items}) => {
             setName(null)
             setQuantity(null)
             setPrice(null)
-            setCategory('Graphics Card') /* the form is set to graphics card by default so im initializing it as this as kind of just a workaround */
+            setCategory('Clothing') /* the form is set to graphics card by default so im initializing it as this as kind of just a workaround */
 
             createMessage('Successfully added item.')
         }
@@ -68,8 +68,9 @@ const AddItem = ({addItem, items}) => {
 
                 <br/><label for="category">Category</label><br/>
                 <select name="categories" id="categories" required onChange={e => {setCategory(e.target.value)}}>
-                    <option value="Graphics Card">Graphics Card</option>
-                    <option value="Laptop">Laptop</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Entertainment">Entertainment</option>
                 </select><br/>
 
                 <button type="submit">Add New Item</button>
